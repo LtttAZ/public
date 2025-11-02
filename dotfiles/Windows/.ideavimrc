@@ -1,0 +1,55 @@
+""" Source your .vimrc
+"source ~/.vimrc
+
+""" Idea specific settings ------------------
+set ideajoin
+
+""" Vim settings -----------------------------
+set incsearch
+set ignorecase smartcase
+set scrolloff=5
+set visualbell
+set noerrorbells
+
+" let mapleader = "\"
+imap jk <Esc>
+
+""" IdeaAction -------------------------------
+nmap == <Action>(ReformatCode)
+nmap Q <Action>(CloseContent)
+nmap gqi <Action>(CloseAllEditorsButActive)
+nmap gq$ <Action>(CloseAllToTheRight)
+nmap gq^ <Action>(CloseAllToTheLeft)
+nmap ; A;<Esc>j^
+nmap <leader>D <Action>(Debug)
+nmap <leader>R <Action>(Run)
+nmap <leader>S <Action>(Stop)
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+nmap <leader>i <Action>(GotoImplementation)
+nmap <leader>T <Action>(ActivateTerminalToolWindow)
+nmap <leader>a ggVG
+nmap <A-h> <Action>(PreviousTab)
+nmap <A-l> <Action>(NextTab)
+nmap <A-j> <Action>(MethodDown)
+nmap <A-k> <Action>(MethodUp)
+
+""" Plugins  --------------------------------
+" https://github.com/JetBrains/ideavim/wiki/Emulated-plugins
+
+set surround
+" cs change surrounding
+" ds delete surrounding
+" ys<motion> add surrounding
+" v<motion>S add surrounding
+
+set NERDTree
+nmap <leader>n :NERDTreeFocus<CR>
+" nnoremap <C-n> :NERDTree<CR>
+nmap <C-n> :NERDTreeToggle<CR>
+" nmap <leader>f :NERDTreeFind<CR>
+
+set vim-paragraph-motion
+
+set highlightedyank
+let g:highlightedyank_highlight_duration = 3000
+" let g:highlightedyank_highlight_color = "rgba(160, 160, 160, 155)"
