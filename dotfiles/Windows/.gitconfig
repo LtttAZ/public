@@ -1,3 +1,6 @@
 [user]
 	name = 'LtttAZ'
 	email = 'louis_zhang_1303@126.com'
+
+[push]
+	default = current
